@@ -21,7 +21,7 @@ services:
 
   wireguard:
     depends_on: [unbound, adguard]
-    image: linuxserver/wireguard:1.0.20210914
+    image: linuxserver/wireguard:latest
     container_name: wireguard
     cap_add:
       - NET_ADMIN
@@ -51,7 +51,7 @@ services:
   adguard:
     depends_on: [unbound]
     container_name: adguard
-    image: adguard/adguardhome:v0.107.21
+    image: adguard/adguardhome:v0.107.29
     restart: unless-stopped
     hostname: adguard
     # Volumes store your data between container upgrades
