@@ -9,7 +9,7 @@ networks:
 
 services:
   unbound:
-    image: "mvance/unbound:1.19.3"
+    image: "mvance/unbound:1.21.1"
     container_name: unbound
     restart: unless-stopped
     hostname: "unbound"
@@ -51,7 +51,7 @@ services:
   adguard:
     depends_on: [unbound]
     container_name: adguard
-    image: adguard/adguardhome:v0.107.48
+    image: adguard/adguardhome:v0.107.54
     restart: unless-stopped
     hostname: adguard
     # Volumes store your data between container upgrades
